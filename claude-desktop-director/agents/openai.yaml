@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claude 桌面指挥官"
+  short_description: "用中文交代目标，让 Mac 智能体以英文指挥 Claude 桌面版并持续验收"
+  default_prompt: "使用 $claude-desktop-director，把我的中文需求整理成英文任务，交给 Mac 上的 Claude 桌面版执行，跟进到完成并用中文汇报。"
