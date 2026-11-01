@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "task_id": "demo-001",
+  "mode": "execute",
+  "phase": "ready",
+  "updated_at": "2026-10-31T12:00:00+00:00",
+  "target": {
+    "app": "Claude",
+    "mode": "chat",
+    "session_anchor": "demo-001 / observed-session-anchor",
+    "workspace": null
+  },
+  "message": {
+    "id": "msg-001",
+    "delivery": "not-sent",
+    "payload_sha256": "b32e349dfd629e9c8c87c563277199fa73028ef0ecface7b08ddea89e5d07e77",
+    "readback": {
+      "payload_sha256": "b32e349dfd629e9c8c87c563277199fa73028ef0ecface7b08ddea89e5d07e77",
+      "target_anchor": "demo-001 / observed-session-anchor",
+      "observed_at": "2026-10-31T12:00:00+00:00",
+      "evidence_ref": "synthetic-fixture:full-composer-readback",
+      "complete": true
+    },
+    "target_anchor": "demo-001 / observed-session-anchor",
+    "prepared_at": "2026-10-31T12:00:00+00:00",
+    "send_started_at": null,
+    "echo": null,
+    "no_effect_evidence": null
+  },
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "required": true,
+      "criterion": "中文总结覆盖原材料的三项已核验事实。",
+      "status": "pending",
+      "evidence": []
+    }
+  ],
+  "blocker": null,
+  "next_action": "示例记录；无真实操作。实际使用前重新观察目标并核对发送前置条件。"
+}
