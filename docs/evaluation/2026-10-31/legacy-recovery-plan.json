@@ -1,0 +1,19 @@
+{
+  "id": 26,
+  "actions": [
+    "以下仅为文字模拟。根据题设已完成的无歧义核对，将 demo-A 旧消息的 delivery 从 unknown 恢复为 confirmed；保留原有 Task: demo-A 标记及实际核对依据，不为旧正文补造 Message-ID。",
+    "Claude 已空闲，旧消息送达也不代表任务完成。进入 verifying，先从正确会话中的原任务要求、最近回复和产物线索列出尚缺的必需验收证据；未独立核验的条件保持 pending。",
+    "如现有会话尚无所需证据，准备下列不同于原任务的证据续问，沿用 demo-A，使用新的 Message-ID。真实执行时先核对目标和编辑框，保留其他草稿，完整读回待发内容；发送前记录 sending，只发送一次，观察正确会话中的完整匹配用户消息后才确认这条续问送达。本次模拟不输入或发送。",
+    "收到证据后，按原任务的授权范围独立核查对应产物、版本及相关结果；未知事实先观察，不捏造命令执行。无法读取的项目记为 unverifiable，缺项记为 pending 或 fail。所有必需条件独立通过后才可 complete；不重发旧任务或重做已完成工作。"
+  ],
+  "message_to_claude": "Task-ID: demo-A\nMessage-ID: demo-A-verification-followup-001\n\nThe original demo-A request is already present in this conversation. Please provide the verification evidence for the original task from its current state. Refer to the original acceptance requirements and identify the corresponding artifacts and their current paths or versions, the checks actually performed, their actual results, and any remaining unverified or incomplete items. Distinguish evidence already available from checks that have not been run. Do not restart the original task or repeat completed operations. Do not run new commands or modify artifacts in response to this evidence request; report any evidence or access gap.",
+  "status": {
+    "phase": "verifying",
+    "original_delivery": "confirmed",
+    "original_message_id": null,
+    "follow_up_delivery": "not-sent",
+    "acceptance": "pending；仍缺独立验证证据，尚不能判定完成",
+    "execution_mode": "text-simulation"
+  },
+  "report": "按题设证据，demo-A 的旧发送可以确认，不再因缺少 Message-ID 阻塞恢复。下一步核验原任务并索取缺失证据；当前未完成验收。上述英文仅为拟定续问，本次没有操作 Claude、联网或修改项目。"
+}

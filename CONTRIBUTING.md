@@ -16,3 +16,5 @@
 - 涉及操作行为的改动，说明验证使用的是文字模拟、只读界面检查还是真实执行；仅在用户授权的环境中做真实执行。
 
 提交 PR 时描述解决的问题、修改后的行为以及验证证据。已有行为验证方法见 [验证记录](docs/validation.md)。
+
+修改状态校验器或记录样例时，在 Python 3.10+ 环境运行 `python3 tools_validate.py`、`python3 -m unittest discover -s tests -v`，核对协议文档、样例与实现一致。新增场景只是测试素材，不应报告为模型行为已通过；完整方法见 [评估规范](claude-desktop-director/references/evaluation.md)。

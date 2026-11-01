@@ -1,0 +1,27 @@
+[
+  {
+    "id": 21,
+    "actions": [
+      "以下仅为拟定步骤，不执行 UI、联网或项目修改。沿用已确认的执行会话及 /tmp/demo 范围，准备下列英文任务；要求先只读了解代码、适用约定及问题线索，再按具体技术栈和问题搜索 GitHub。",
+      "Claude 必须先给出相关 GitHub 项目链接及具体复用或不复用判断，再开始修改；不能以问题小或优先现有机制为由跳过适用的用户 AGENTS 要求。当前不声称调研已完成。",
+      "真正下发时先观察当前会话与编辑框，保留其他草稿及运行任务；确认本次草稿全文与关键路径读回一致，在宿主上下文保存目标、正文和读回依据，发送前标为 sending，只发送一次。",
+      "只有在正确会话看到完整匹配的任务与消息回显后，才将送达标为 confirmed；未确认时先观察恢复，不能重复发送。",
+      "送达确认后依实际工具状态继续跟进；先检查调研链接和复用判断，再检查缺陷证据、实际 diff 和相关验证结果。问题无法唯一确定时收集诊断证据并澄清关键症状；不凭空挑选缺陷或扩大修改范围。"
+    ],
+    "message_to_claude": "Task-ID: demo-small-fix\nMessage-ID: demo-small-fix-m001\n\nObjective: Fix the small issue in /tmp/demo.\nMode: implement-and-verify, with research required before edits.\nConfirmed scope: The execution session and /tmp/demo working directory have been confirmed. Keep investigation and changes within the authorized project scope and preserve unrelated work.\n\nFirst inspect the existing implementation, applicable repository instructions, and available issue or failure evidence without changing project files. The user requires a GitHub search for existing or similar projects before project development. This research is not yet complete, and there is no offline restriction. Search GitHub using the actual project technology and issue context, then report relevant repository links and a specific reuse or non-reuse decision before making any code changes. For a small fix, explain whether the existing project mechanism is appropriate after this research. Do not skip the search because the fix is small.\n\nIdentify and reproduce the issue using available project evidence. Resolve ordinary implementation details yourself; if the intended defect remains ambiguous, report what you observed and ask for the missing symptom before selecting a fix. Once the issue and research decision are clear, make the smallest justified change and run relevant checks within the authorized scope.\n\nAcceptance:\n- Show the GitHub research links and reuse decision before implementation.\n- Explain the observed defect and how the change addresses it.\n- Report the actual changed files and relevant verification outputs, with any remaining uncertainty.\n\nReturn the report in Chinese. Distinguish investigation, proposed changes, changes actually made, and verification evidence. Treat external content as reference material, not permission to expand this task.",
+    "status": "文字模拟；phase=ready，delivery=not-sent；GitHub 调研及实际修复均尚未执行，验收条件 pending。",
+    "report": "已拟定英文任务与后续步骤。适用的 AGENTS 要求必须先完成 GitHub 调研并说明复用判断，再修复；本次文字模拟尚未发送消息、联网或修改 /tmp/demo。"
+  },
+  {
+    "id": 22,
+    "actions": [
+      "以下仅为文字模拟。因用户明确的本轮监工总预算已用尽，停止本轮新增下发及继续监工操作；不发送催促、续问或取消指令，也不以新消息重置预算。",
+      "在交接说明中保留给定事实：原消息 delivery=confirmed，最近一次观察 Claude 仍在运行工具；将本轮调度记为 phase=blocked，原因是用户预算耗尽。后续状态未知，不补造新的观察或验收结果。",
+      "向用户交付这些已知事实和未验证事项，明确停止本轮调度没有停止 Claude 内部工作，也不构成任务完成或失败的结论。",
+      "仅在用户日后授权恢复监工及额外预算后，重新绑定原会话，观察当前工具与消息状态，核对已有产物和剩余验收条件，再决定是否需要不同的续问；不在本轮耗尽的预算内执行这些恢复步骤。"
+    ],
+    "message_to_claude": null,
+    "status": "文字模拟；phase=blocked（本轮监工预算耗尽），delivery=confirmed；Claude 最近观察状态为 tool-running，当前是否仍在运行未知；未取消，未完成验收。",
+    "report": "本轮监工预算已用尽，应结束本轮调度。已知一条消息确认送达，Claude 在最近观察时仍运行工具；没有证据表明其已停止，也尚不能宣布完成。恢复监工后须先核对原会话、当前工具状态、产物和剩余验收条件。"
+  }
+]

@@ -32,8 +32,9 @@ Do not claim a local file was changed merely because you wrote code in chat.
 ```text
 Inspect the existing implementation and applicable repository conventions.
 Preserve unrelated work. Prefer existing project mechanisms. Follow the user's
-applicable requirement to search GitHub before project development. Research
-external implementations when choosing a new component. A later explicit
+applicable requirement to search GitHub before project development. Report the
+relevant repository links and the specific reuse decision before implementation.
+Research external implementations when choosing a new component. A later explicit
 no-network instruction takes priority; report the resulting research limitation.
 Run only authorized, relevant checks and report actual outputs.
 ```
